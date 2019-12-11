@@ -7,16 +7,14 @@ LUAROCKS_VERSION=3.1.3
 OPENSSL_VERSION=1.1.1c
 KONG_VERSION=1.4.1
 
+cd /
+sudo mkdir /kong-build
+
 echo "*************************************************************************"
 echo "Building openresty"
 echo "*************************************************************************"
 
-if [ -d "openresty-build-tools" ]; then
-    echo "already clone"
-    rm -rf openresty-build-tools/work rm -rf openresty-build-tools/buildroot
-else
-    git clone https://github.com/Kong/openresty-build-tools.git
-fi
+git clone https://github.com/Kong/openresty-build-tools.git
 cd openresty-build-tools
 ./kong-ngx-build \
     -p buildroot \
