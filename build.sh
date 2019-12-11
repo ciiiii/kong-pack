@@ -14,9 +14,9 @@ echo "*************************************************************************"
 echo "Building openresty"
 echo "*************************************************************************"
 
-git clone https://github.com/Kong/openresty-build-tools.git
+sudo git clone https://github.com/Kong/openresty-build-tools.git
 cd openresty-build-tools
-./kong-ngx-build \
+sudo ./kong-ngx-build \
     -p buildroot \
     --openresty $OPENRESTY_VERSION \
     --openssl $OPENSSL_VERSION \
@@ -30,19 +30,19 @@ echo "*************************************************************************"
 echo "Installing kong"
 echo "*************************************************************************"
 
-wget -O kong.tgz "https://github.com/Kong/kong/archive/${KONG_VERSION}.tar.gz"
-tar -xzvf kong.tgz
+sudo wget -O kong.tgz "https://github.com/Kong/kong/archive/${KONG_VERSION}.tar.gz"
+sudo tar -xzvf kong.tgz
 cd "kong-${KONG_VERSION}"
-make install
+sudo make install
 
 cd ..
 echo "*************************************************************************"
 echo "Archive kong dependencies"
 echo "*************************************************************************"
-rm -rf openresty-build-tools/work
-rm -rf openresty-build-tools/LICENSE
-rm -rf openresty-build-tools/README.md
-rm -rf openresty-build-tools/kong-ngx-build
-rm -rf openresty-build-tools/t
+sudo rm -rf openresty-build-tools/work
+sudo rm -rf openresty-build-tools/LICENSE
+sudo rm -rf openresty-build-tools/README.md
+sudo rm -rf openresty-build-tools/kong-ngx-build
+sudo rm -rf openresty-build-tools/t
 
-tar -cvzf kong-dep-ubuntu18.04.tgz openresty-build-tools
+sudo tar -cvzf kong-dep-ubuntu18.04.tgz openresty-build-tools
