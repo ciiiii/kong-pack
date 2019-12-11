@@ -8,13 +8,6 @@ OPENSSL_VERSION=1.1.1c
 KONG_VERSION=1.4.1
 
 echo "*************************************************************************"
-echo "Installing apt dependencies"
-echo "*************************************************************************"
-
-apt update -qq
-apt install make gcc git libpcre3-dev libssl-dev perl build-essential curl zlib1g-dev unzip m4 libyaml-dev valgrind -y -qq
-
-echo "*************************************************************************"
 echo "Building openresty"
 echo "*************************************************************************"
 
