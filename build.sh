@@ -24,6 +24,8 @@ cd openresty-build-tools
     --openssl $OPENSSL_VERSION \
     --luarocks $LUAROCKS_VERSION \
     --force
+ln -s "$(pwd)/buildroot/luarocks/bin/luarocks" /usr/bin/luarocks
+luarocks --version
 cd ..
 
 echo "*************************************************************************"
