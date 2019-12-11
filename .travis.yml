@@ -18,10 +18,10 @@ addons:
       - valgrind
 script:
   - bash build.sh
-before_deploy:
-  - git config --local user.name "ciiiii"
-  - git config --local user.email "allen.ccccnm@gmail.com"
-  - git tag 1.4.1-ubuntu18.04
+# before_deploy:
+#   - git config --local user.name "ciiiii"
+#   - git config --local user.email "allen.ccccnm@gmail.com"
+#   - git tag 1.4.1-ubuntu18.04
 deploy:
   provider: releases
   skip_cleanup: true
@@ -30,3 +30,4 @@ deploy:
   file: kong-dep-ubuntu18.04.tgz
   on:
     repo: ciiiii/kong-pack
+    tags: true
