@@ -9,6 +9,7 @@ KONG_VERSION=1.4.1
 
 cd /
 sudo mkdir /kong-build
+cd /kong-build
 
 echo "*************************************************************************"
 echo "Building openresty"
