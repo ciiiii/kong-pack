@@ -31,3 +31,6 @@ deploy:
   on:
     repo: ciiiii/kong-pack
     tags: true
+
+notifications:
+  slack: cyou-tech:1CImRdJdrBQMK7SW3lcyQDIx

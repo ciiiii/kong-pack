@@ -5,7 +5,7 @@ set -o errexit
 OPENRESTY_VERSION=1.15.8.1
 LUAROCKS_VERSION=3.1.3
 OPENSSL_VERSION=1.1.1c
-KONG_VERSION=1.4.1
+KONG_VERSION=1.4.2
 
 cd /
 sudo mkdir /kong-build
