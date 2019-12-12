@@ -31,9 +31,9 @@ echo "*************************************************************************"
 echo "Installing kong"
 echo "*************************************************************************"
 
-sudo wget -O kong.tgz "https://github.com/Kong/kong/archive/${KONG_VERSION}.tar.gz"
-sudo tar -xzvf kong.tgz
-cd "kong-${KONG_VERSION}"
+sudo git clone https://github.com/Kong/kong.git
+cd kong
+sudo git checkout b481e38e817ec945aa508372fce7721717d91166
 sudo make install
 
 cd ..
