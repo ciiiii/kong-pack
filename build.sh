@@ -2,10 +2,10 @@
 
 set -o errexit
 
-OPENRESTY_VERSION=1.15.8.1
+OPENRESTY_VERSION=1.15.8.2
 LUAROCKS_VERSION=3.1.3
 OPENSSL_VERSION=1.1.1c
-KONG_VERSION=1.4.2
+KONG_VERSION=2.1.0
 
 cd /
 sudo mkdir /kong-build
@@ -33,7 +33,7 @@ echo "*************************************************************************"
 
 sudo git clone https://github.com/Kong/kong.git
 cd kong
-sudo git checkout b481e38e817ec945aa508372fce7721717d91166
+sudo git checkout $KONG_VERSION
 sudo make install
 
 cd ..
