@@ -47,3 +47,5 @@ sudo rm -rf openresty-build-tools/kong-ngx-build
 sudo rm -rf openresty-build-tools/t
 
 sudo tar -cvzf kong-dep-ubuntu18.04.tgz openresty-build-tools
+cd /
+sudo tar -cvzf kong-ubuntu18.04.tgz /kong-build
